@@ -226,6 +226,7 @@ const PikabuShop = {
             .forEach((t) => el.addEventListener(t, stop));
         el.querySelector('.pk-back').addEventListener('click', () => this.close());
         el.querySelector('.pk-x').addEventListener('click', () => this.close());
+        el.querySelector('.pk-win').addEventListener('click', () => el.querySelector('.pk-win').classList.remove('pk-on'));   // «Получено!» закрывается по нажатию
         window.addEventListener('keydown', (e) => { if (this.isOpen && e.key === 'Escape') { e.stopPropagation(); this.close(); } }, true);
         document.body.appendChild(el);
         this._el = el;
